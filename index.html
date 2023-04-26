@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <form action class="login-form">
+            <h1 class="login-title">Login Page</h1>
+            <label>Username:</label>
+            <input type="text" placeholder="username">
+            <label>Password:</label>
+            <input type="password" placeholder="pass">
+            <button type="Submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const formElem = document.getElementById('login');
+            formElem.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const loginBtn = document.getElementById('loginBtn');
+                loginBtn.innerHTML = 'Login In.....'
+                let userNameElem = formElem.children['username'];
+                let passwordElem = formElem.children['password'];
+                alert(`Username:${UserNameElem.value},Password: ${paswordElen.value}`)
+
+            });
+        });
+    </script>
+</body>
+
+</html>

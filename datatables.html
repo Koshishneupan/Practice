@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+
+</head>
+
+<body>
+    <table id="myTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <!-- Initialize DataTables with the AJAX data source -->
+    <script>
+        $(document).ready(function() {
+            $('#myTable').DataTable({
+                ajax: {
+                    url: 'https://example.com/api/data',
+                    dataSrc: 'items'
+                },
+                columns: [{
+                    data: 'name'
+                }, {
+                    data: 'age'
+                }, {
+                    data: 'country'
+                }]
+            });
+        });
+    </script>
+</body>
+
+</html>

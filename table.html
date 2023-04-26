@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Table</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="sample-row">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function addData() {
+
+            const arr = [{
+                name: 'name one',
+                email: 'email one',
+                address: 'address one'
+            }, {
+                name: 'name two',
+                email: 'email two',
+                address: 'address two'
+            }, {
+                name: 'name three',
+                email: 'email three',
+                address: 'address three'
+            }];
+            const sampleRow = document.getElementById('Sample-row')
+            const tableElem = sampleRow.closet('tbody');
+            arr.forEach(item => {
+                let trElem = sampleRow.cloneNOde(true);
+            })
+        }
+    </script>
+</body>
+
+</html>
